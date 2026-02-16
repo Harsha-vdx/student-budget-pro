@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Budget Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<h1><button onclick="logout()" style="float:right;">Logout</button>💰 Student Budget Pro</h1>
+
+<div class="form-section">
+    <input id="budget" type="number" placeholder="Set Monthly Budget">
+
+    <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+
+    <input id="amount" type="number" placeholder="Amount">
+    <input id="category" placeholder="Category">
+
+    <button onclick="addTransaction()">Add Transaction</button>
+</div>
+
+<div class="dashboard">
+    <div class="card">
+        <h3>Total Income</h3>
+        <p id="incomeCard">₹0</p>
+    </div>
+    <div class="card">
+        <h3>Total Expense</h3>
+        <p id="expenseCard">₹0</p>
+    </div>
+    <div class="card">
+        <h3>Balance</h3>
+        <p id="balanceCard">₹0</p>
+    </div>
+</div>
+
+<p id="budgetStatus"></p>
+
+<canvas id="chart"></canvas>
+
+<div class="history">
+    <h3>Transaction History</h3>
+    <div id="history"></div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
